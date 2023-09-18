@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include Pundit
+
   protect_from_forgery
 
   rescue_from StandardError, with: :handle_api_exception

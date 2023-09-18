@@ -16,7 +16,7 @@ class Task < ApplicationRecord
 
   private
 
-    def set_slugß
+    def set_slug
       title_slug = title.parameterize
       regex_pattern = "slug #{Constants::DB_REGEX_OPERATOR} ?"
       latest_task_slug = Task.where(
