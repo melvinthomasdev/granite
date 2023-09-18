@@ -3,6 +3,7 @@
 class Task < ApplicationRecord
   MAX_TITLE_LENGTH = 125
   VALID_TITLE_REGEX = /\A.*[a-zA-Z0-9].*\z/i
+  belongs_to :assigned_user, foreign_key: "assigned_user_id", class_name: "User"
 
   validates :title,
     presence: true,
@@ -15,7 +16,7 @@ class Task < ApplicationRecord
 
   private
 
-    def set_slug
+    def set_slugß
       title_slug = title.parameterize
       regex_pattern = "slug #{Constants::DB_REGEX_OPERATOR} ?"
       latest_task_slug = Task.where(
