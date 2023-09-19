@@ -76,3 +76,5 @@ gem "react-rails", "~> 2.7.1"
 gem "pundit"
 
 gem "bcrypt", "~> 3.1.13"
+
+gem "simplecov", require: false, group: :test
