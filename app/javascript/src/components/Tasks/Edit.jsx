@@ -66,7 +66,7 @@ const Edit = ({ history }) => {
 
   useEffect(() => {
     loadData();
-  });
+  }, []);
 
   if (pageLoading) {
     return (
