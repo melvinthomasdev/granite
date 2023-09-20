@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const list = () => axios.get("/tasks");
+const fetch = () => axios.get("/tasks");
 
 const show = slug => axios.get(`/tasks/${slug}`);
 
@@ -24,7 +24,7 @@ const destroy = ({ slug, quiet }) => {
 };
 
 const tasksApi = {
-  list,
+  fetch,
   show,
   create,
   update,
