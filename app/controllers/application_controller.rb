@@ -2,7 +2,6 @@
 
 class ApplicationController < ActionController::Base
   before_action :authenticate_user_using_x_auth_token
-  include Pundit
 
   protect_from_forgery
 
